@@ -1,0 +1,41 @@
+Commands mainly used in the bash terminal
+
+
+# INSTALLATION
+
+pip install --upgrade openai
+
+export OPENAI_API_KEY="<OPENAI_API_KEY>"
+
+
+# PREPARING THE DATA
+
+openai tools fine_tunes.prepare_data -f <LOCAL_FILE>
+
+
+
+
+# CREATING A FINE TUNE MODEL
+
+openai api fine_tunes.create -t <TRAIN_FILE_ID_OR_PATH> -m <BASE_MODEL>
+
+
+
+# RESUMING MODEL EVENT STREAM CONTINUATION 
+
+openai api fine_tunes.follow -i <YOUR_FINE_TUNE_JOB_ID>
+
+
+# ASSOCIATED COMMANDS
+
+openaiapi fine_tunes.list
+
+openai api fine_tunes.get -i <YOUR_FINE_TUNE_JOB_ID>
+
+openai api fine_tunes.cancel -i <YOUR_FINE_TUNE_JOB_ID>
+
+
+# USING THE FINE TUNE MODEL WITH BASH
+
+openai api completions.create -m <FINE_TUNED_MODEL> -p <YOUR_PROMPT>
+
