@@ -1,7 +1,12 @@
 
 import openai
+import os
+from dotenv import load_dotenv
 
-api_key = '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'
+
+load_dotenv()
+
+api_key = os.getenv("OPENAI_API_KEY")
 
 openai.api_key = api_key
 
@@ -21,18 +26,6 @@ def chat_with_model(message):
 
 
 
-chat_with_model('how to build a house?')
+chat_with_model('tell me about the cosmos?')
 
 
-
-
-
-
-
-
-
-# user_input = input("User: ")
-
-# response = chat_with_model(user_input)
-# print("ChatGPT: " + response)
-# user_input = input("User: ")
