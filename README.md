@@ -52,7 +52,7 @@ process_excel_file(file_name)
 The `chat_with_model` function uses the fine-tuned GPT-3 model to respond to user queries. Simply call this function with a user message as the input.
 
 ```python
-response = chat_with_model('how to build a house?')
+response = chat_with_model('Tell me about the cosmos')
 print("ChatGPT: " + response)
 ```
 
