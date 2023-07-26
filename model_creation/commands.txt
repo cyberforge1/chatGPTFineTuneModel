@@ -28,7 +28,7 @@ openai api fine_tunes.follow -i <YOUR_FINE_TUNE_JOB_ID>
 
 # ASSOCIATED COMMANDS
 
-openaiapi fine_tunes.list
+openai api fine_tunes.list
 
 openai api fine_tunes.get -i <YOUR_FINE_TUNE_JOB_ID>
 

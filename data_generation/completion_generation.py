@@ -30,7 +30,7 @@ def process_excel_file(file_name):
     sheet = workbook.active
     
     # Add 'Completions' to the first row of the second column
-    sheet.cell(row=1, column=2, value='Completions')
+    sheet.cell(row=1, column=2, value='completion')
 
     for idx, row in enumerate(sheet.iter_rows(min_row=2, min_col=1, max_col=1, values_only=True), start=2):
         prompt = row[0]
@@ -41,7 +41,7 @@ def process_excel_file(file_name):
     workbook.save(file_path)
 
 
-file_name = 'example_prompt_data.xlsx'
+file_name = 'prompt_data.xlsx'
 
 
 process_excel_file(file_name)
